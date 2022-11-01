@@ -137,8 +137,14 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
   let cont=0
-  arreglo.forEach(element => console.log(element) );
-
+  // for(i=0;i<=arreglo.length;i++){
+  //   if(arreglo[i]>18){
+  //     cont++ ;
+  //   }
+  // }
+  // return cont;
+  arreglo.forEach(element => { if(element>18) cont++ });
+  return cont;
 }
 
 
@@ -146,8 +152,33 @@ function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquí
+  let day;
+    switch(numeroDeDia) {
+      case 1: 
+        day = "Es fin de semana";
+        break;
+      case 2: 
+        day = "Es dia Laboral";
+        break;
+      case 3: 
+        day = "Es dia Laboral";
+        break;
+      case 4: 
+        day = "Es dia Laboral";
+        break;
+      case 5: 
+        day = "Es dia Laboral";
+        break;
+      case 6: 
+        day = "Es dia Laboral";
+        break;
+      case 7: 
+        day = "Es fin de semana";
+        break;
+    }
+    return day;   
+
 } 
 
 
@@ -155,15 +186,34 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  if(Math.round(n) == n){
+    if(String(n)[0] == 9){
+      return true
+    }else{
+      return false
+    }
+  }
 }
 
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
-  
+  //Escribe tu código aquí
+  let tam_arreglo = arreglo.length;
+  let primer_elemento = arreglo[0];
+  let cont = 0;
+  arreglo.forEach( element => {
+    
+    if(primer_elemento == element){
+      cont++
+    }
+  })
+  if(tam_arreglo == cont){
+    return true;
+  }else{
+    return false;
+  } 
 } 
 
 
