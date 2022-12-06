@@ -45,17 +45,14 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  array.map(element =>{ 
-      nuevo_array = cb(element);
-      return nuevo_array;
-  })
-
+  return array2 = array.map(element => cb(element))
 }
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+  return array2 = array.filter( element => { if(element.charAt(0) == 'a') return element } )
 }
 
 // No modificar nada debajo de esta línea
